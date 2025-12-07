@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  filebot:
+    build: .
+    image: filebot:slim
+    container_name: filebot
+    environment:
+      - DISPLAY_WIDTH=1920
+      - DISPLAY_HEIGHT=1080
+      - KEEP_APP_RUNNING=1
+      - USER_ID=1000
+      - GROUP_ID=1000
+      - TZ=America/New_York
+    ports:
+      - "5800:5800"
+      - "5900:5900"
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    restart: unless-stopped
