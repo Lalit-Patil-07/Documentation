@@ -5,3 +5,4 @@ This repository serves as a central documentation hub for various applications a
 ## Documentation Sections
 
 * [Airflow](Assets/Airflow/README.md)
+* [FileBot Docker (Slim)](Assets/filebot-docker/README.md)
